@@ -19,21 +19,53 @@ const PrompCardList = ({ data, handleTagClick }) => {
 };
 
 const Feed = () => {
-  const [searchText, setSearchText] = useState("");
-  const [posts, setPosts] = useState([]);
+  const [allPosts, setAllPosts] = useState([]);
 
-  const handleSearchChange = (e) => {};
+  // search state
+  const [searchText, setSearchText] = useState("");
+  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchedResult, setSearchedResult] = useState([]);
+
+  const fetchPosts = async () => {
+    const response = await fetch("/api/prompt");
+    const data = await response.json();
+
+    setAllPosts(data);
+  };
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response = await fetch("/api/prompt");
-      const data = await response.json();
-
-      setPosts(data);
-    };
-
     fetchPosts();
   }, []);
+
+  const filterPrompts = (searchText) => {
+    const regex = new RegExp(searchText, "i"); // i flag untuk case-insensitive search
+    return allPosts.filter(
+      (item) =>
+        regex.test(item.creator.username) ||
+        regex.test(item.tag) ||
+        regex.test(item.prompt)
+    );
+  };
+
+  const handleSearchChange = (e) => {
+    clearTimeout(searchTimeout);
+    setSearchText(e.target.value);
+
+    // metode debounce
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResult(searchResult);
+      }, 500)
+    );
+  };
+
+  const handleTagClick = (tagName) => {
+    setSearchText(tagName);
+
+    const searchResult = filterPrompts(tagName);
+    setSearchedResult(searchResult);
+  };
 
   return (
     <section className="feed">
@@ -48,7 +80,12 @@ const Feed = () => {
         />
       </form>
 
-      <PrompCardList data={posts} handleTagClick={() => {}} />
+      {/* semua quotes */}
+      {searchText ? (
+        <PrompCardList data={searchedResult} handleTagClick={handleTagClick} />
+      ) : (
+        <PrompCardList data={allPosts} handleTagClick={handleTagClick} />
+      )}
     </section>
   );
 };
