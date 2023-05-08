@@ -8,10 +8,9 @@ const Home = () => {
       <h1 className="head_text text-center">
         Explore dan Bagikan!
         <br className="max-md:hidden" />
-        <span className="orange_gradient text-center">Quote</span>
       </h1>
       <p className="desc text-center">
-        Urquotes adalah website open-source untuk saling berbagi quotes!
+        Urquotes adalah website open-source untuk saling berbagi quotes.
       </p>
 
       <Feed />
