@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Urquotes
 
-## Getting Started
+> A website to sharing quotes create with Next.js and MongoDB for database
+> Link to website [_here_](https://urquotes.vercel.app/).
 
-First, run the development server:
+## Table of Contents
+
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Contact](#contact)
+
+## General Information
+
+- Discover and sharing quotes.
+- This website is used to post and sharing a quotes.
+
+## Technologies Used
+
+- Next.js - version 13.0
+- NextAuth - version 4.22.1
+- MongoDB - version 6.0
+
+## Features
+
+- Login using Google Authentication
+- Search, post, edit and delete a quotes
+- Save user data using MongoDB
+- Implementation of frontend and backend features in Next.js and implementing CRUD features
+
+## Screenshots
+
+![Example screenshot](./public/assets/images/screenshot.png)
+
+## Setup
+
+To run this project, install it locally using npm:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+$ cd ../urquotes
+$ npm install
+$ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Status
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Project is: _complete._ <!-- / _complete_ / _no longer being worked on_. reason ? -->
 
-## Learn More
+## Room for Improvement
 
-To learn more about Next.js, take a look at the following resources:
+- Add some functions for better experience
+- Added a comment feature on each quote
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- The theme and color palette on this website are inspired by the [Dracula](https://draculatheme.com/) theme.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Created by [@Zulhaditya](https://itsmyportofolio.netlify.app/) - feel free to contact me!
