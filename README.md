@@ -1,6 +1,6 @@
 # Urquotes
 
-> A website to sharing quotes create with Next.js and MongoDB for database
+> A website to sharing quotes create with Next.js and MongoDB for database.
 > Link to website [_here_](https://urquotes.vercel.app/).
 
 ## Table of Contents
