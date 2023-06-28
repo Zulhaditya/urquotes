@@ -27,10 +27,10 @@
 
 ## Features
 
-- Login using Google Authentication
-- Search, post, edit and delete a quotes
-- Save user data using MongoDB
-- Implementation of frontend and backend features in Next.js and implementing CRUD features
+- Login using Google Authentication.
+- Search, post, edit and delete a quotes.
+- Save user data using MongoDB.
+- Implementation of frontend and backend features in Next.js and implementing CRUD features.
 
 ## Screenshots
 
