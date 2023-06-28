@@ -54,8 +54,8 @@ Project is: _complete._ <!-- / _complete_ / _no longer being worked on_. reason 
 
 ## Room for Improvement
 
-- Add some functions for better experience
-- Added a comment feature on each quote
+- Add some functions for better experience.
+- Added a comment feature on each quote.
 
 ## Acknowledgements
 
